@@ -154,7 +154,9 @@ Route::get('/check', [HomeController::class, 'check'])->middleware(
 );
 // Route::get('/password/resets/{lang?}', 'Auth\LoginController@showLinkRequestForm')->name('change.langPass');
 
-Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(['XSS']);
+Route::get('/', function () {
+    return redirect('/login');
+})->name('home');
 
 Route::get('career/{id}/{lang}', [JobController::class, 'career'])->name('career');
 Route::get('job/requirement/{code}/{lang}', [JobController::class, 'jobRequirement'])->name('job.requirement');
