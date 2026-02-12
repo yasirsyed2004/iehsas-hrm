@@ -7,11 +7,11 @@
             <?php if((isset($value->login) && $value->login == "on") && (isset($value->template_name) && $value->template_name == 'page_content')): ?>
                 <li class="nav-item">
                     <a class="nav-link"
-                       href="<?php echo e(route('custom.page', $value->page_slug)); ?>"><?php echo e($value->menubar_page_name); ?></a>
+                       href="<?php echo e(url('/login')); ?>"><?php echo e($value->menubar_page_name); ?></a>
                 </li>
             <?php elseif( (isset($value->login) && $value->login == "on") && (isset($value->template_name) && $value->template_name == 'page_url')): ?>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="<?php echo e($value->page_url); ?>"><?php echo e($value->menubar_page_name); ?></a>
+                    <a class="nav-link" href="<?php echo e(url('/login')); ?>"><?php echo e($value->menubar_page_name); ?></a>
                 </li>
             <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
