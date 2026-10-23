@@ -2,3 +2,8 @@
 /.vscode
 /vendor/srmklive/paypal/tests/Mocks/samples/sample2.pdf
 /vendor/srmklive/paypal/tests/Mocks/samples/sample.pdf
+
+# Environment files hold secrets — never commit them
+.env
+.env.backup
+.env.production
